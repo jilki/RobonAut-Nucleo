@@ -1,0 +1,7 @@
+"src/gpio.o"
+"src/main.o"
+"src/stm32f4xx_it.o"
+"src/syscalls.o"
+"src/system_stm32f4xx.o"
+"src/uart.o"
+"startup/startup_stm32f446xx.o"
