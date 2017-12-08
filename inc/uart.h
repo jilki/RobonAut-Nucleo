@@ -10,6 +10,6 @@
 
 void InitUart(void);
 
-void SendOverBluetooth(char *msg);
+void SendOverBluetooth(uint8_t *msg);
 
 #endif /* UART_H_ */

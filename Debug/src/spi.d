@@ -1,4 +1,4 @@
-src/main.o: ../src/main.c \
+src/spi.o: ../src/spi.c \
  C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/CMSIS/device/stm32f4xx.h \
  C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/CMSIS/device/stm32f446xx.h \
  C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/CMSIS/core/core_cm4.h \
@@ -70,10 +70,7 @@ src/main.o: ../src/main.c \
  C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/HAL_Driver/Inc/stm32f4xx_hal_fmpi2c.h \
  C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/HAL_Driver/Inc/stm32f4xx_hal_fmpi2c_ex.h \
  C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h \
- C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/Utilities/STM32F4xx-Nucleo/stm32f4xx_nucleo.h \
- C:/Users/Zsolt/stm_workspace/bluetooth/bluetooth/inc/gpio.h \
- C:/Users/Zsolt/stm_workspace/bluetooth/bluetooth/inc/uart.h \
- C:/Users/Zsolt/stm_workspace/bluetooth/bluetooth/inc/spi.h
+ C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/Utilities/STM32F4xx-Nucleo/stm32f4xx_nucleo.h
 
 C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/CMSIS/device/stm32f4xx.h:
 
@@ -218,9 +215,3 @@ C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/HAL_Driver/Inc/stm32f4xx_hal_
 C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/HAL_Driver/Inc/stm32f4xx_hal_spdifrx.h:
 
 C:/Users/Zsolt/stm_workspace/nucleo-f446re_hal_lib/Utilities/STM32F4xx-Nucleo/stm32f4xx_nucleo.h:
-
-C:/Users/Zsolt/stm_workspace/bluetooth/bluetooth/inc/gpio.h:
-
-C:/Users/Zsolt/stm_workspace/bluetooth/bluetooth/inc/uart.h:
-
-C:/Users/Zsolt/stm_workspace/bluetooth/bluetooth/inc/spi.h:
