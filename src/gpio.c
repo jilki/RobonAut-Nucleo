@@ -41,3 +41,73 @@ void InitGPIO()
 	HAL_GPIO_Init(GPIOC,&gpiocstruct);
 
 }
+
+void activateChipSelect(uint8_t moduleNumber){
+	switch(moduleNumber){
+	case 0:
+	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,GPIO_PIN_RESET);
+	    break;
+	case 1:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,GPIO_PIN_RESET);
+	    break;
+	case 2:
+	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2,GPIO_PIN_RESET);
+	    break;
+	case 3:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4,GPIO_PIN_RESET);
+	    break;
+	case 4:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5,GPIO_PIN_RESET);
+	    break;
+	case 5:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3,GPIO_PIN_RESET);
+	    break;
+	case 6:
+	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0,GPIO_PIN_RESET);
+	    break;
+	case 7:
+	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3,GPIO_PIN_RESET);
+	    break;
+	case 8:
+	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4,GPIO_PIN_RESET);
+	    break;
+	case 9:
+	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10,GPIO_PIN_RESET);
+	    break;
+	}
+}
+
+void deactivateChipSelect(uint8_t moduleNumber){
+	switch(moduleNumber){
+	case 0:
+	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,GPIO_PIN_SET);
+	    break;
+	case 1:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6,GPIO_PIN_SET);
+	    break;
+	case 2:
+	    HAL_GPIO_WritePin(GPIOD, GPIO_PIN_2,GPIO_PIN_SET);
+	    break;
+	case 3:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4,GPIO_PIN_SET);
+	    break;
+	case 4:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5,GPIO_PIN_SET);
+	    break;
+	case 5:
+	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3,GPIO_PIN_SET);
+	    break;
+	case 6:
+	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_0,GPIO_PIN_SET);
+	    break;
+	case 7:
+	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_3,GPIO_PIN_SET);
+	    break;
+	case 8:
+	    HAL_GPIO_WritePin(GPIOC, GPIO_PIN_4,GPIO_PIN_SET);
+	    break;
+	case 9:
+	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_10,GPIO_PIN_SET);
+	    break;
+	}
+}

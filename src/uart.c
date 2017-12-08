@@ -2,7 +2,7 @@
 #include "stm32f4xx_nucleo.h"
 
 
-uint16_t uartsize=40 ;
+uint16_t uartsize=45 ;
 uint32_t uarttimeout=10000 ;
 uint8_t pData='a';
 

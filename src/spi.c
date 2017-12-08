@@ -39,7 +39,7 @@ SPI_HandleTypeDef hspi1;
 		hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
 		hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
 		hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
-		//hspi1.Init.CRCPolynomial = 10;
+		hspi1.Init.CRCPolynomial = 10;
 
 		/* Peripheral clock enable */
 		__SPI1_CLK_ENABLE();
@@ -62,7 +62,7 @@ SPI_HandleTypeDef hspi1;
 
 	}
 
-void readTcrtSensor(uint8_t* buff)
+void readTcrtSensor(uint32_t* buff)
 {
 	uint8_t dummyData = 0xAA;
 	uint8_t dummyWrite = 0xAA;
@@ -70,7 +70,9 @@ void readTcrtSensor(uint8_t* buff)
 	for(uint8_t i = 0; i < 8; i++)
 	{
 		HAL_SPI_TransmitReceive(&hspi1, &i, &dummyData, 1, 0xFF);
+		HAL_Delay(1);
 		HAL_SPI_TransmitReceive(&hspi1, &dummyWrite, buff+i, 1, 0xFF);
+		HAL_Delay(1);
 	}
 }
 

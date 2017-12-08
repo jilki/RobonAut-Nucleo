@@ -10,4 +10,9 @@
 
 void InitGPIO(void);
 
+void activateChipSelect(uint8_t moduleNumber);
+
+void deactivateChipSelect(uint8_t moduleNumber);
+
+
 #endif /* GPIO_H_ */

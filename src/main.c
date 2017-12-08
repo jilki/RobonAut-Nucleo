@@ -26,7 +26,7 @@ int main(void)
 	InitGPIO();
 	InitSpi();
 
-	uint8_t buf[24];
+	uint32_t buf[24];
 	uint8_t send_buf[]="some really long string and more lenghtgfdgfdwe fg wew\n";
 	SendOverBluetooth(send_buf);
 	uint8_t dummyData = 0xAA;
@@ -48,23 +48,20 @@ int main(void)
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_9,GPIO_PIN_SET);
 
 
-//		snprintf(send_buf, sizeof(send_buf), "Module #1\n%02X %02X %02X %02X %02X %02X %02X %02X \n", buf[0], buf[1], buf[2],buf[3],buf[4],buf[5],buf[6],buf[7]);
-//		SendOverBluetooth(send_buf);
-		HAL_Delay(10);
-
 
 	    /*Chip Select*/
 		/* Sensor Module #6 */
-	    HAL_Delay(50);
+	    HAL_Delay(1);
 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3,GPIO_PIN_RESET);
 	    readTcrtSensor(buf);
 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3,GPIO_PIN_SET);
 
 
 
-		snprintf(send_buf, sizeof(send_buf), "\nModule #6 \n %03d %03d %03d %03d %03d %03d %03d %03d", buf[0], buf[1], buf[2],buf[3],buf[4],buf[5],buf[6],buf[7]);
+		snprintf(send_buf, sizeof(send_buf), "\nModule #6 \n %03d %03d %03d %03d %03d %03d %03d %03d", (uint8_t) buf[0], (uint8_t)buf[1], (uint8_t)buf[2],(uint8_t)buf[3],(uint8_t)buf[4],(uint8_t)buf[5],(uint8_t)buf[6],(uint8_t)buf[7]);
 		SendOverBluetooth(send_buf);
-		HAL_Delay(10);	}
+		HAL_Delay(10);
+	}
 
 
 }

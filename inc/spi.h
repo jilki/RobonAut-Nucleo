@@ -10,6 +10,6 @@
 
 void MX_SPI2_Init(void);
 
-void readTcrtSensor(uint8_t* buff);
+void readTcrtSensor(uint32_t* buff);
 
 #endif /* SPI_H_ */
